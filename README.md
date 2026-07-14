@@ -1,1 +1,1 @@
-# Prateek-Mali-s-Portfolio
+# Prateek-Mali-Portfolio
