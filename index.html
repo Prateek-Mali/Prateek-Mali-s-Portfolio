@@ -28,7 +28,14 @@
 
   <!-- NAV -->
   <div style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 6vw; background:rgba(250,246,236,0.88); backdrop-filter:blur(8px); border-bottom:2px solid #181410;">
-    <a href="#hero" style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:22px; color:#181410; text-decoration:none;">Prateek<span style="color:#F5A623;">.</span>Mali</a>
+    <a href="#hero" style="display:flex; align-items:center; gap:11px; text-decoration:none;">
+      <span style="flex:none; width:38px; height:38px; background:#181410; border-radius:11px; display:inline-flex; align-items:center; justify-content:center; box-shadow:3px 3px 0 #F5A623; transform:rotate(-5deg);">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" role="img" aria-label="Prateek Mali logo">
+          <text x="19" y="19" text-anchor="middle" dominant-baseline="central" font-family="'Baloo 2', sans-serif" font-weight="800" font-size="15" letter-spacing="-0.5" fill="#F5A623">PM</text>
+        </svg>
+      </span>
+      <span style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:22px; color:#181410;">Prateek<span style="color:#F5A623;">.</span>Mali</span>
+    </a>
     <div style="display:flex; gap:28px; align-items:center;" class="nav-links">
       <a href="#about" style="font-weight:600; font-size:15px; color:#181410; text-decoration:none; position:relative; padding-bottom:3px; background-image:linear-gradient(#F5A623,#F5A623); background-repeat:no-repeat; background-position:0 100%; background-size:0% 2px; transition:background-size .25s ease;" style-hover="background-size:100% 2px;">About</a>
       <a href="#capabilities" style="font-weight:600; font-size:15px; color:#181410; text-decoration:none; position:relative; padding-bottom:3px; background-image:linear-gradient(#F5A623,#F5A623); background-repeat:no-repeat; background-position:0 100%; background-size:0% 2px; transition:background-size .25s ease;" style-hover="background-size:100% 2px;">Capabilities</a>
@@ -108,13 +115,45 @@
       <h2 style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(30px,4vw,46px); margin:0 0 44px;">Capabilities</h2>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px;">
-        <sc-for list="{{ capabilities }}" as="c" hint-placeholder-count="4">
-          <div style="background:#F5A623; border-radius:28px; padding:32px 26px; border:2px solid #181410; box-shadow:6px 6px 0 #181410; transition:transform .25s ease;">
-            <div style="width:56px; height:56px; background:#181410; border-radius:16px; display:flex; align-items:center; justify-content:center; margin-bottom:22px;" dangerouslySetInnerHTML="{{ c.iconHtml }}"></div>
-            <div style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; margin-bottom:8px;">{{ c.title }}</div>
-            <div style="font-size:14px; font-weight:500; color:#3a2f22; line-height:1.5;">{{ c.desc }}</div>
+        <div style="background:#F5A623; border-radius:28px; padding:32px 26px; border:2px solid #181410; box-shadow:6px 6px 0 #181410; transition:transform .25s ease;">
+          <div style="width:56px; height:56px; background:#181410; border-radius:16px; display:flex; align-items:center; justify-content:center; margin-bottom:22px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Full-Stack Development">
+              <path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/>
+            </svg>
           </div>
-        </sc-for>
+          <div style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; margin-bottom:8px;">Full-Stack Development</div>
+          <div style="font-size:14px; font-weight:500; color:#3a2f22; line-height:1.5;">End-to-end web apps — from data pipelines to deployed, production-ready UI.</div>
+        </div>
+
+        <div style="background:#F5A623; border-radius:28px; padding:32px 26px; border:2px solid #181410; box-shadow:6px 6px 0 #181410; transition:transform .25s ease;">
+          <div style="width:56px; height:56px; background:#181410; border-radius:16px; display:flex; align-items:center; justify-content:center; margin-bottom:22px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="RAG and LLM Engineering">
+              <ellipse cx="12" cy="5.5" rx="7.5" ry="3"/><path d="M4.5 5.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"/><path d="M4.5 11.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"/>
+            </svg>
+          </div>
+          <div style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; margin-bottom:8px;">RAG &amp; LLM Engineering</div>
+          <div style="font-size:14px; font-weight:500; color:#3a2f22; line-height:1.5;">Retrieval-augmented systems using vector databases and modern LLM APIs.</div>
+        </div>
+
+        <div style="background:#F5A623; border-radius:28px; padding:32px 26px; border:2px solid #181410; box-shadow:6px 6px 0 #181410; transition:transform .25s ease;">
+          <div style="width:56px; height:56px; background:#181410; border-radius:16px; display:flex; align-items:center; justify-content:center; margin-bottom:22px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Workflow Automation with n8n">
+              <circle cx="5" cy="6" r="2.4"/><circle cx="19" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M7.2 7.2 10 16M16.8 7.2 14 16M7.4 6h9.2"/>
+            </svg>
+          </div>
+          <div style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; margin-bottom:8px;">Workflow Automation (n8n)</div>
+          <div style="font-size:14px; font-weight:500; color:#3a2f22; line-height:1.5;">Automated pipelines connecting APIs, data sources, and models.</div>
+        </div>
+
+        <div style="background:#F5A623; border-radius:28px; padding:32px 26px; border:2px solid #181410; box-shadow:6px 6px 0 #181410; transition:transform .25s ease;">
+          <div style="width:56px; height:56px; background:#181410; border-radius:16px; display:flex; align-items:center; justify-content:center; margin-bottom:22px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ML Model Deployment">
+              <path d="M12 3v10"/><path d="m8 7 4-4 4 4"/><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/>
+            </svg>
+          </div>
+          <div style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; margin-bottom:8px;">ML Model Deployment</div>
+          <div style="font-size:14px; font-weight:500; color:#3a2f22; line-height:1.5;">Training and shipping ML models as real, usable products.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -225,32 +264,15 @@ class Component extends DCLogic {
     els.forEach((el) => obs.observe(el));
   }
 
-  icon(name) {
-    const stroke = (paths, vb = '0 0 24 24') =>
-      `<svg width="26" height="26" viewBox="${vb}" fill="none">${paths}</svg>`;
-    const icons = {
-      code: stroke('<path d="M9 6L3 12L9 18" stroke="#F5A623" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6L21 12L15 18" stroke="#F5A623" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'),
-      chat: stroke('<path d="M4 5h16v11H8l-4 4V5z" stroke="#F5A623" stroke-width="2.2" stroke-linejoin="round"/>'),
-      flow: stroke('<circle cx="5" cy="6" r="2.4" stroke="#F5A623" stroke-width="2"/><circle cx="19" cy="6" r="2.4" stroke="#F5A623" stroke-width="2"/><circle cx="12" cy="18" r="2.4" stroke="#F5A623" stroke-width="2"/><path d="M7.2 7.2L10 16M16.8 7.2L14 16M7.4 6h9.2" stroke="#F5A623" stroke-width="1.8"/>'),
-      deploy: stroke('<path d="M12 3l7 4v10l-7 4-7-4V7l7-4z" stroke="#F5A623" stroke-width="2" stroke-linejoin="round"/><path d="M12 12v9M5 7l7 5 7-5" stroke="#F5A623" stroke-width="2" stroke-linejoin="round"/>'),
-    };
-    return { __html: icons[name] || icons.code };
-  }
-
   renderVals() {
     return {
       skills: ['Python', 'JavaScript', 'Jupyter', 'React / Node', 'n8n', 'Qdrant (Vector DB)', 'Gemini / LLM APIs', 'Git / GitHub'],
-      capabilities: [
-        { title: 'Full-Stack Development', desc: 'End-to-end web apps — from data pipelines to deployed, production-ready UI.', iconHtml: this.icon('code') },
-        { title: 'RAG & LLM Engineering', desc: 'Retrieval-augmented systems using vector databases and modern LLM APIs.', iconHtml: this.icon('chat') },
-        { title: 'Workflow Automation (n8n)', desc: 'Automated pipelines connecting APIs, data sources, and models.', iconHtml: this.icon('flow') },
-        { title: 'ML Model Deployment', desc: 'Training and shipping ML models as real, usable products.', iconHtml: this.icon('deploy') },
-      ],
       projects: [
+        { name: 'Ember & Oak — Restaurant', lang: 'JavaScript', url: 'https://github.com/Prateek-Mali/Restaurant', desc: 'Real-time QR ordering system for restaurants — customers scan a table QR to browse the live menu, order from their phone, and track food in real time. Orders hit the kitchen display instantly, with an admin dashboard for menu, tables, staff, and revenue. Built with MERN + Socket.IO.' },
         { name: 'CreditGuard AI', lang: 'Jupyter Notebook', url: 'https://github.com/Prateek-Mali/CreditGuard-AI', desc: 'Full-stack ML web app predicting loan default risk using a Random Forest model trained on 32,581 real records, with multi-currency support across 6 global currencies.' },
         { name: 'Career', lang: 'JavaScript', url: 'https://github.com/Prateek-Mali/Career', desc: 'AI-powered career prediction platform recommending personalized career paths using user choices, skills, and interests — with intelligent assessments and real-time chatbot guidance.' },
-        { name: 'pdf-rag-chatbot', lang: 'Python', url: 'https://github.com/Prateek-Mali/pdf-rag-chatbot', desc: 'RAG chatbot answering questions from any PDF using Google Gemini embeddings, Qdrant vector database, and Gemini 2.5 Flash for response generation.' },
-        { name: 'dermascan-ai', lang: 'HTML', url: 'https://github.com/Prateek-Mali/dermascan-ai', desc: 'AI-based dermatology and skin scanning tool for quick visual analysis and guidance.' },
+        { name: 'pdf-rag-chatbot', lang: 'RAG', url: 'https://github.com/Prateek-Mali/pdf-rag-chatbot', desc: 'RAG chatbot answering questions from any PDF using Google Gemini embeddings, Qdrant vector database, and Gemini 2.5 Flash for response generation.' },
+        { name: 'dermascan-ai', lang: 'Deep Learning', url: 'https://github.com/Prateek-Mali/dermascan-ai', desc: 'AI-based dermatology and skin scanning tool for quick visual analysis and guidance.' },
       ],
       certifications: [
         { title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional', issuer: 'Oracle', url: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=D24CEA3E646D01D1F1EBC42781882131776147FA5B3C86292A86F26C2708A06E', img: 'https://brm-workforce.oracle.com/pdf/certview/images/OCI25GAIOCP.png' },
